@@ -1,0 +1,50 @@
+//Calculates the number of people needed so that the probability
+//of at least two of them having the same birthday
+//is greater than or equal to the
+inputProbability
+//also returns that exact probability of two same birthdays for
+//the number of people returned
+public static double[] calculatePersons (double inputProb){
+int numPeople
+= 0:
+int days = 366;
+double probNoTwoSame = 1:
+while (days>0) f
+numPeople++;
+days
+probNoTwoSame *= days/ 365.0;
+//stop if the probability that two people have the same
+//birthday exceeds the input probability
+if (1-probNoTwoSame >
+inputProb)
+break;
+}
+double I result = new double!2l:
+result[0l
+= numPeople;
+result[1]
+= 1
+- probNoTwoSame;
+return result:
+7
+//report on the number of people needed and the exact probability
+public static void report (double inputProbability, doublel] results) t
+int numPersons = (int) results[0];
+double actualProb = results[1];
+System.out.print("\n" + numPersons
++
+I
+people are needed for the
+1):
+System.out.println("probability that at least two of them") ;
+System.out.println("having the same birthday exceeds
+if
+inputProbability
+System.out.println("\nFor
++ numPersons +
+the exact " +
+"probability that two or more have the same
+System.out.println("birthday is "
++ actualProb);
+7
+1
